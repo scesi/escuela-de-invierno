@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.svg';
 import burgerIcon from '../assets/burgerIcon.svg';
+import { fade } from 'astro:transitions';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -21,8 +22,8 @@ const currentPath = Astro.url.pathname;
       </button>
 
       <ul class="nav-links" id="navLinks">
-          <li class="link"><a class={currentPath === "/" ? 'active' : ''} href="/" transition:animate="fade">Home</a></li>
-          <li class="link"><a class={currentPath === "/call-projects"? 'active' : ''} href="/call-projects" transition:animate="fade">Llamado a Concurso de Proyectos de Graduacion</a></li>
+          <li class="link"><a class={currentPath === "/" ? 'active' : ''} href="/" transition:animate={fade({ duration: '0.4s' })}>Home</a></li>
+          <li class="link"><a class={currentPath === "/call-projects"? 'active' : ''} href="/call-projects" transition:animate={fade({ duration: '0.4s' })}>Llamado a Concurso de Proyectos de Graduacion</a></li>
       </ul>
     </div>
     </nav>
