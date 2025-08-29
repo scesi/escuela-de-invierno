@@ -21,7 +21,7 @@ const currentPath = Astro.url.pathname;
             <div class="nav-links-container" id="navLinks">
                 <ul class="nav-links" >
                     <li class="link"><a class={currentPath === "/" ? 'active' : ''} href="/" transition:animate={fade({ duration: '0.4s' })}>Home</a></li>
-                    <li class="link"><a class={currentPath === "/call-projects"? 'active' : ''} href="/call-projects" transition:animate={fade({ duration: '0.4s' })}>Llamado a Concurso de Proyectos de Graduacion</a></li>
+                    <li class="link"><a class={currentPath === "/content"? 'active' : ''} href="/content" transition:animate={fade({ duration: '0.4s' })}>Llamado a Concurso de Proyectos de Graduacion</a></li>
                 </ul>
             </div>
         </div>
