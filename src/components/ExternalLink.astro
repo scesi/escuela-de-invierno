@@ -1,0 +1,19 @@
+---
+// src/components/ExternalLink.astro
+interface Props {
+  href: string;
+  text: string;
+  className?: string;
+}
+
+const { href, text, className = "" } = Astro.props;
+---
+
+<a 
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={className}
+>
+  {text}
+</a>
